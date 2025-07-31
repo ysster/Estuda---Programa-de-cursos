@@ -1,0 +1,136 @@
+ * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .Logo {
+            width: 200px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .Linha {
+            width: 100%;
+            height: 50px;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .topbar {
+  background-color: #000;
+  padding: 10px;
+  text-align: center;
+}
+
+.logo {
+  max-height: 60px;
+}
+
+.curso-container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.curso-conteudo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.imagem-curso {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #e0e0e0;
+}
+
+.btn img {
+  width: 24px;
+  height: 24px;
+}
+
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo img {
+            width: 180px;
+            height: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-column h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .footer-column a {
+            color: #fff;
+            text-decoration: none;
+        }

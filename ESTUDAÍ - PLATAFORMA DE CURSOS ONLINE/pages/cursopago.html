@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudaí - Cursos Pagos</title>
+    <link rel="stylesheet" href="../assets/css/cursopago.css">
+</head>
+<script>
+        // Aplica o tema salvo antes do CSS carregar
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+<body>
+    <!-- Cabeçalho -->
+    <nav>
+        <img src="../assets/img/logo-principal.png" alt="Logo Estudaí" class="Logo">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">🌓</button>
+    </nav>
+
+    <!-- Linha preta com botão de voltar -->
+    <div class="Linha">
+        <div class="back-button" onclick="window.history.back()" aria-label="Voltar para página anterior">
+            <div class="arrow"></div>
+        </div>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <h1>Cursos Pagos</h1>
+        <div class="curso-container">
+            <!-- Cards de cursos -->
+            <div class="curso-card" tabindex="0">
+                <img src="../assets/img/1.png" alt="Curso 1">
+                <p>Treinamento Marketing Digital Completo</p>
+                <a href="inscriçãopago.html"><button>Comprar</button></a>
+            </div>
+            <div class="curso-card" tabindex="0">
+                <img src="../assets/img/2.png" alt="Curso 2">
+                <p>Curso Técnico em Enfermagem</p>
+                <a href="inscriçãopago.html"><button>Comprar</button></a>
+            </div>
+            <div class="curso-card" tabindex="0">
+                <img src="../assets/img/3.png" alt="Curso 3">
+                <p>Curso Técnico em Informática</p>
+                <a href="inscriçãopago.html"><button>Comprar</button></a>
+            </div>
+            <div class="curso-card" tabindex="0">
+                <img src="../assets/img/4.png" alt="Curso 4">
+                <p>Curso Técnico em Logística</p>
+                <a href="inscriçãopago.html"><button>Comprar</button></a>
+            </div>
+            <div class="curso-card" tabindex="0">
+                <img src="../assets/img/5.png" alt="Curso 5">
+                <p>Curso Tecnico em Segurança do Trabalho</p>
+                <a href="inscriçãopago.html"><button>Comprar</button></a>
+            </div>
+            <div class="curso-card" tabindex="0">
+                <img src="../assets/img/6.png" alt="Curso 6">
+                <p>Curso Técnico em logística</p>
+                <a href="inscriçãopago.html"><button>Comprar</button></a>
+            </div>
+            <div class="curso-card" tabindex="0">
+                <img src="../assets/img/7.png" alt="Curso 7">
+                <p>Curso Técnico em Informática</p>
+                <a href="inscriçãopago.html"><button>Comprar</button></a>
+            </div>
+            <div class="curso-card" tabindex="0">
+                <img src="../assets/img/8.png" alt="Curso 8">
+                <p>Treinamento Marketing Digital completo</p>
+                <a href="inscriçãopago.html"><button>Comprar</button></a>
+            </div>
+        </div>
+
+        <p class="slogan">Qualifique-se. Evolua. Conquiste.</p>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="../assets/img/logopreta.png" alt="ÉSTUDAL" class="logo">
+        </div>
+        
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>APRENDA COM A GENTE</h4>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Feed de Estudos</a></li>
+                    <li><a href="#">Cursos Gratuitos</a></li>
+                    <li><a href="#">Cursos Pagos</a></li>
+                    <li><a href="#">Conquistas e Progresso</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>LOJA DE CURSOS</h4>
+                <ul>
+                    <li><a href="#">Explorar Cursos</a></li>
+                    <li><a href="#">Materiais Premium</a></li>
+                    <li><a href="#">Assinaturas</a></li>
+                    <li><a href="#">Kits de Estudo</a></li>
+                    <li><a href="#">Cupons & Ofertas</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>AJUDA</h4>
+                <ul>
+                    <li><a href="#">Central de Dúvidas</a></li>
+                    <li><a href="#">Suporte Técnico</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>CONTATO</h4>
+                <ul>
+                    <li><a href="#">Fale Conosco</a></li>
+                    <li><a href="mailto:estudad@gmail.com">estudad@gmail.com</a></li>
+                    <li>Segunda a sexta: 9h –18h</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sistema de temas
+        document.getElementById('themeToggle').addEventListener('click', () => {
+            const themes = ['light', 'dark', 'aurora'];
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            const newIndex = (themes.indexOf(currentTheme) + 1) % themes.length;
+            const newTheme = themes[newIndex];
+            
+            localStorage.setItem('theme', newTheme);
+            document.documentElement.setAttribute('data-theme', newTheme);
+        });
+
+        // Interações dos cards
+        document.querySelectorAll('.curso-card').forEach(card => {
+            card.addEventListener('click', function() {
+                console.log('Curso selecionado:', this.querySelector('p').textContent);
+            });
+            
+            card.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    this.click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

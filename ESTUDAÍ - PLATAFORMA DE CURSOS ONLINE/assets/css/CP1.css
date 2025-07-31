@@ -1,0 +1,203 @@
+/* Reset e Estilos Base */
+:root {
+    --primary-color: #000;
+    --secondary-color: #f5f5f5;
+    --text-color: #000;
+    --light-gray: #f8f8f8;
+    --medium-gray: #e0e0e0;
+    --dark-gray: #ccc;
+    --white: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    padding: 1.25rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 12.5rem;
+    height: 5rem;
+    object-fit: contain;
+}
+
+/* Barra de Navegação */
+.navigation-bar {
+    width: 100%;
+    height: 3.125rem;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1.25rem;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.arrow {
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-top: 0.125rem solid var(--white);
+    border-right: 0.125rem solid var(--white);
+    transform: rotate(-135deg);
+}
+
+/* Conteúdo Principal */
+.course-container {
+    text-align: center;
+    padding: 2.5rem 1.25rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.course-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.course-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 1.875rem;
+    flex-wrap: wrap;
+}
+
+.course-image {
+    width: 18.75rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.action-button {
+    background-color: var(--light-gray);
+    border: 1px solid var(--dark-gray);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.action-button:hover {
+    background-color: var(--medium-gray);
+}
+
+.action-button img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Rodapé */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2.5rem 1.25rem;
+    margin-top: 3.125rem;
+}
+
+.footer-logo {
+    text-align: center;
+    margin-bottom: 1.875rem;
+}
+
+.footer-logo img {
+    width: 11.25rem;
+    height: auto;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.875rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column h4 {
+    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 0.625rem;
+    font-size: 0.875rem;
+}
+
+.footer-column a {
+    color: var(--white);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer-column a:hover {
+    opacity: 0.8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .course-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .action-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .logo {
+        width: 10rem;
+        height: 4rem;
+    }
+}

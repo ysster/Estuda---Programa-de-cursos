@@ -1,0 +1,108 @@
+* {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .Logo {
+            width: 200px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .Linha {
+            width: 100%;
+            height: 50px;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .back-button {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .arrow {
+            width: 0; 
+            height: 0; 
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 12px solid black;
+            margin-left: 2px;
+        }
+
+        .Slogan {
+            font-weight: 900;
+            font-size: 20px;
+            text-align: center;
+            padding: 40px 0;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+           .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo img {
+            width: 180px;
+            height: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-column h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .footer-column a {
+            color: #fff;
+            text-decoration: none;
+        }

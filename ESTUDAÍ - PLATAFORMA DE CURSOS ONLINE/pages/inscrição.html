@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudaí - Inscrição</title>
+    <link rel="stylesheet" href="../assets/css/inscrição.css">
+</head>
+<body>
+   <!-- Cabeçalho -->
+    <nav>
+        <img src="../assets/img/logo-principal.png" alt="Logo Estudaí" class="Logo">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">🌓</button>
+    </nav>
+
+    <!-- Linha preta com botão de voltar -->
+    <div class="Linha">
+        <div class="back-button" onclick="window.history.back()">
+            <div class="arrow"></div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <!-- Título da página -->
+        <h1 class="page-title">INSCRIÇÃO</h1>
+
+        <!-- Seção de Informações Pessoais -->
+        <h2 class="section-title">Informações Pessoais</h2>
+        
+        <div class="form-group">
+            <label>Nome completo*</label>
+            <input type="text" placeholder="Informe seu nome">
+        </div>
+        
+        <div class="inline-fields">
+            <div class="form-group">
+                <label>Data de nascimento</label>
+                <input type="text" placeholder="DD/MM/AAAA">
+            </div>
+            <div class="form-group">
+                <label>CPF ou RG*</label>
+                <input type="text">
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label>E-mail*</label>
+            <input type="email" placeholder="Informe seu e-mail">
+        </div>
+        
+        <div class="form-group">
+            <label>Telefone para contato*</label>
+            <input type="tel">
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Seção de Informações do Curso -->
+        <h2 class="section-title">Informações do Curso</h2>
+        
+        <div class="form-group">
+            <label>Curso desejado</label>
+            <select>
+                <option value="" disabled selected>selecione o curso</option>
+                <option value="">Do zero ao código </option>
+                <option value="">Branding express</option>
+                <option value="">Comece seu negócio</option>
+                <option value="">Do zero ao código</option>
+                <option value="">Curso de inglês</option>
+                <option value="">Curso de Empreendedorismo Digital E Inovação</option>
+                <option value="">Fisioterapia Respiratória</option>
+                <option value="">Curso Profissionalizante De Refrigeração Comercial</option>
+                <option value="">Design de Sobrancelha e Depilação Facial</option>
+                <option value="">Curso manutenção de videogames</option>
+            </select>
+        </div>
+        
+        <div class="checkbox-group">
+            <label>Turno preferencial</label>
+            <div class="checkbox-options">
+                <div class="checkbox-option">
+                    <input type="checkbox" id="matutino">
+                    <label for="matutino">Matutino</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="vespertino">
+                    <label for="vespertino">Vespertino</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="noturno">
+                    <label for="noturno">Noturno</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="ead">
+                    <label for="ead">EAD</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="radio-group">
+            <label>Já possui alguma formação técnica?</label>
+            <div class="radio-options">
+                <div class="radio-option">
+                    <input type="radio" id="sim" name="formacao" value="sim">
+                    <label for="sim">Sim</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="nao" name="formacao" value="nao">
+                    <label for="nao">Não</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label>Se sim, qual?</label>
+            <input type="text" placeholder="Informe sua formação">
+        </div>
+        
+        <div class="form-group">
+            <label>Endereço</label>
+            <div class="inline-fields">
+                <div class="form-group">
+                    <label>CEP</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>Cidade / Estado</label>
+                    <input type="text" placeholder="Informe sua cidade">
+                </div>
+            </div>
+            <label>Endereço completo (Rua, número, bairro)</label>
+            <input type="text" placeholder="Informe seu endereço">
+        </div>
+
+        <a href="../pages/Minhainscrição.html"><button class="submit-btn">Inscrever-se</button></a>
+        
+        <div class="divider"></div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="../assets/img/logopreta.png" alt="ÉSTUDAL" class="logo">
+        </div>
+        
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>APRENDA COM A GENTE</h4>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Feed de Estudos</a></li>
+                    <li><a href="#">Cursos Gratuitos</a></li>
+                    <li><a href="#">Cursos Pagos</a></li>
+                    <li><a href="#">Conquistas e Progresso</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>LOJA DE CURSOS</h4>
+                <ul>
+                    <li><a href="#">Explorar Cursos</a></li>
+                    <li><a href="#">Materiais Premium</a></li>
+                    <li><a href="#">Assinaturas</a></li>
+                    <li><a href="#">Kits de Estudo</a></li>
+                    <li><a href="#">Cupons & Ofertas</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>AJUDA</h4>
+                <ul>
+                    <li><a href="#">Central de Dúvidas</a></li>
+                    <li><a href="#">Suporte Técnico</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>CONTATO</h4>
+                <ul>
+                    <li><a href="#">Fale Conosco</a></li>
+                    <li><a href="#">estudad@gmail.com</a></li>
+                    <li><a href="#">Segunda a sexta: 9h –18h</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sistema de gerenciamento de tema completo
+        (function() {
+            // Aplica o tema salvo imediatamente
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
+            // Configura o botão de tema
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                // Ícones correspondentes a cada tema
+                const themeIcons = {
+                    light: '🌙', 
+                    dark: '🌅',  
+                    aurora: '🌞'
+                };
+                
+                // Atualiza o ícone inicial
+                themeToggle.textContent = themeIcons[savedTheme] || '🌓';
+                
+                // Alternância de temas
+                themeToggle.addEventListener('click', () => {
+                    const themes = ['light', 'dark', 'aurora'];
+                    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+                    const currentIndex = themes.indexOf(currentTheme);
+                    const nextIndex = (currentIndex + 1) % themes.length;
+                    const nextTheme = themes[nextIndex];
+                    
+                    // Aplica o novo tema
+                    localStorage.setItem('theme', nextTheme);
+                    document.documentElement.setAttribute('data-theme', nextTheme);
+                    
+                    // Atualiza o ícone para mostrar o próximo tema
+                    themeToggle.textContent = themeIcons[nextTheme];
+                });
+            }
+            
+            // Animação do botão de voltar
+            const backButton = document.querySelector('.back-button');
+            const arrow = document.querySelector('.arrow');
+            
+            if (backButton && arrow) {
+                backButton.addEventListener('mouseover', () => {
+                    arrow.style.transform = 'translateX(-5px)';
+                });
+                
+                backButton.addEventListener('mouseout', () => {
+                    arrow.style.transform = 'translateX(0)';
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
