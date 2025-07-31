@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Estudaí - Minhas Inscrições</title>
+  <link rel="stylesheet" href="../assets/css/Minhainscrição.css" />
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <nav>
+    <img src="../assets/img/logo-principal.png" alt="Logo Estudaí" class="Logo" />
+  </nav>
+
+  <!-- Linha preta com botão de voltar -->
+  <div class="Linha">
+    <div class="back-button" onclick="window.history.back()">
+      <div class="arrow"></div>
+    </div>
+  </div>
+
+  <!-- Slogan -->
+  <h2 class="Slogan">Qualifique-se. Evolua. Conquiste.</h2>
+
+  <!-- Container da inscrição -->
+  <div id="inscricaoContainer" style="margin: 40px auto; text-align: center;"></div>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="../assets/img/logopreta.png" alt="ÉSTUDAÍ" class="logo" />
+    </div>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>APRENDA COM A GENTE</h4>
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Feed de Estudos</a></li>
+          <li><a href="#">Cursos Gratuitos</a></li>
+          <li><a href="#">Cursos Pagos</a></li>
+          <li><a href="#">Conquistas e Progresso</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>LOJA DE CURSOS</h4>
+        <ul>
+          <li><a href="#">Explorar Cursos</a></li>
+          <li><a href="#">Materiais Premium</a></li>
+          <li><a href="#">Assinaturas</a></li>
+          <li><a href="#">Kits de Estudo</a></li>
+          <li><a href="#">Cupons & Ofertas</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>AJUDA</h4>
+        <ul>
+          <li><a href="#">Central de Dúvidas</a></li>
+          <li><a href="#">Suporte Técnico</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>CONTATO</h4>
+        <ul>
+          <li><a href="#">Fale Conosco</a></li>
+          <li><a href="#">estudad@gmail.com</a></li>
+          <li><a href="#">Segunda a sexta: 9h –18h</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script para exibir a inscrição -->
+  <script>
+    const cursoSalvo = localStorage.getItem("cursoInscrito");
+
+    const cursos = {
+      seguranca: {
+        nome: "Do zero ao código",
+        imagem: "../assets/img/1.png"
+      },
+      logistica: {
+        nome: "Curso Técnico em Logística",
+        imagem: "https://via.placeholder.com/400x200/FFC107/000000?text=Logística"
+      },
+      informatica: {
+        nome: "Curso Técnico em Informática",
+        imagem: "https://via.placeholder.com/400x200/28A745/ffffff?text=Informática"
+      },
+      enfermagem: {
+        nome: "Curso em Enfermagem",
+        imagem: "https://via.placeholder.com/400x200/FF69B4/ffffff?text=Enfermagem"
+      },
+      marketing: {
+        nome: "Treinamento Marketing Digital Completo",
+        imagem: "https://via.placeholder.com/400x200/8A2BE2/ffffff?text=Marketing+Digital"
+      }
+    };
+
+    const container = document.getElementById("inscricaoContainer");
+
+    if (cursoSalvo && cursos[cursoSalvo]) {
+      const curso = cursos[cursoSalvo];
+      container.innerHTML = `
+        <div style="max-width: 500px; margin: 0 auto; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); padding: 20px;">
+          <img src="${curso.imagem}" alt="${curso.nome}" style="width: 100%; border-radius: 8px; margin-bottom: 20px;" />
+          <h2>${curso.nome}</h2>
+          <p style="font-size: 16px;">Você está inscrito(a) neste curso.</p>
+        </div>
+      `;
+    } else {
+      container.innerHTML = `<p style="font-size: 18px; text-align: center;">Nenhuma inscrição encontrada.</p>`;
+    }
+  </script>
+</body>
+</html>
